@@ -74,16 +74,24 @@ public class MainMenuUI : MonoBehaviour
             statusText.text = $"Match Found! ID: {msg.matchId}";
         }
 
+        // Find Match butonunu gizle/deaktif et
         if (findMatchButton != null)
         {
-            Text buttonText = findMatchButton.GetComponentInChildren<Text>();
-            if (buttonText != null)
-            {
-                buttonText.text = "Match Found!";
-            }
+            findMatchButton.gameObject.SetActive(false);
+            // Ya da sadece deaktif etmek istersen:
+            // findMatchButton.interactable = false;
         }
 
-        // Sonraki adým: Karakter seçme ekranýna geç
-        // StartCharacterSelection(msg.matchId);
+        // Character selection'ý göster
+        CharacterSelectionUI charUI = FindObjectOfType<CharacterSelectionUI>();
+        if (charUI != null)
+        {
+            Debug.Log("Found CharacterSelectionUI, calling ShowCharacterSelection");
+            charUI.ShowCharacterSelection(msg.matchId);
+        }
+        else
+        {
+            Debug.LogError("CharacterSelectionUI not found!");
+        }
     }
 }

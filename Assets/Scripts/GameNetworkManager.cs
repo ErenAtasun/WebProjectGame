@@ -1,8 +1,14 @@
 using Mirror;
 using UnityEngine;
-
+using Mirror.SimpleWeb;
 public class GameNetworkManager : NetworkManager
 {
+    void Start()
+    {
+        // SimpleWebTransport kullan
+        GetComponent<SimpleWebTransport>().port = 7778; // Web için farklý port
+    }
+
     public override void OnStartClient()
     {
         base.OnStartClient();
