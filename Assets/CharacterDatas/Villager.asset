@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Villager
   m_EditorClassIdentifier: 
   characterId: 0
-  characterName: 
+  characterName: Villager
   characterColor: {r: 0, g: 0, b: 0, a: 0}
   characterModel: {fileID: 0}
   moveSpeed: 5
