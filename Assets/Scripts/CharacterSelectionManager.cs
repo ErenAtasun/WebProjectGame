@@ -70,8 +70,6 @@ public class CharacterSelectionManager : NetworkBehaviour
     {
         var match = matchSelections[matchId];
 
-        // Bu match için kaç oyuncu olmasý gerekiyor? (QueueManager'dan alýnabilir)
-        
         int expectedPlayers = QueueManager.Instance.maxPlayersPerMatch;
 
         if (match.playerSelections.Count >= expectedPlayers && !match.allPlayersReady)
@@ -85,8 +83,12 @@ public class CharacterSelectionManager : NetworkBehaviour
                 player.Send(new AllPlayersReadyMessage { matchId = matchId });
             }
 
-            // Game scene'ine geç (sonraki adýmda yapacaðýz)
-            // StartGameForMatch(matchId);
+            // YENÝ: Game scene'ine geç
+            GameNetworkManager networkManager = FindObjectOfType<GameNetworkManager>();
+            if (networkManager != null)
+            {
+                networkManager.LoadGameSceneForMatch(matchId);
+            }
         }
     }
 }
