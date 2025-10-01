@@ -77,16 +77,22 @@ public class CharacterSelectionManager : NetworkBehaviour
             match.allPlayersReady = true;
             Debug.Log($"All players ready for match {matchId}! Starting game...");
 
-            // Tüm oyunculara hazýr mesajý gönder
-            foreach (var player in match.playerSelections.Keys)
-            {
-                player.Send(new AllPlayersReadyMessage { matchId = matchId });
-            }
-
-            // YENÝ: Game scene'ine geç
+            // ÖNEMLÝ: Character bilgilerini GameNetworkManager'a kaydet
             GameNetworkManager networkManager = FindObjectOfType<GameNetworkManager>();
             if (networkManager != null)
             {
+                foreach (var playerData in match.playerSelections)
+                {
+                    networkManager.SetPlayerMatchData(playerData.Key, matchId, playerData.Value);
+                    Debug.Log($"Saved character {playerData.Value} for connection {playerData.Key.connectionId}");
+                }
+
+                // Tüm oyunculara hazýr mesajý gönder
+                foreach (var player in match.playerSelections.Keys)
+                {
+                    player.Send(new AllPlayersReadyMessage { matchId = matchId });
+                }
+
                 networkManager.LoadGameSceneForMatch(matchId);
             }
         }

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c362594af8666d247b5d693c6d00ae8d, type: 3}
-  m_Name: Villager
+  m_Name: XEmpo
   m_EditorClassIdentifier: 
-  characterId: 1
-  characterName: Villager
+  characterId: 2
+  characterName: xempo
   characterSprite: {fileID: 0}
   characterTint: {r: 0.87169814, g: 0.66596514, b: 0, a: 1}
   moveSpeed: 5

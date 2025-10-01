@@ -106,22 +106,17 @@ public class GameNetworkManager : NetworkManager
         if (SpawnManager.Instance != null)
         {
             spawnPos = SpawnManager.Instance.GetSpawnPosition(conn.connectionId);
+            spawnPos.z = 0; // 2D için Z=0
             Debug.Log($"Spawn position: {spawnPos}");
         }
-        else
-        {
-            Debug.LogWarning("SpawnManager.Instance is null!");
-        }
 
-        // Player'ý spawn et
         if (playerPrefab == null)
         {
-            Debug.LogError("Player Prefab is null! Set it in GameNetworkManager Inspector!");
+            Debug.LogError("Player Prefab is null!");
             return;
         }
 
         GameObject player = Instantiate(playerPrefab, spawnPos, Quaternion.identity);
-        Debug.Log($"Player instantiated at {spawnPos}");
 
         // Character bilgilerini ata
         PlayerController controller = player.GetComponent<PlayerController>();
@@ -129,7 +124,11 @@ public class GameNetworkManager : NetworkManager
         {
             controller.characterId = playerMatchData[conn].characterId;
             controller.matchId = playerMatchData[conn].matchId;
-            Debug.Log($"Player spawned with character {controller.characterId} for match {controller.matchId}");
+            Debug.Log($"ASSIGNED: Character {controller.characterId} for connection {conn.connectionId}");
+        }
+        else
+        {
+            Debug.LogWarning($"No character data found for connection {conn.connectionId}");
         }
 
         NetworkServer.AddPlayerForConnection(conn, player);

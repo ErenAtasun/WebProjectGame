@@ -10,5 +10,4 @@ public class CharacterData : ScriptableObject
 
     // Karakter özellikleri (server-side)
     public float moveSpeed = 5f;
-    public int maxHealth = 100;
 }
