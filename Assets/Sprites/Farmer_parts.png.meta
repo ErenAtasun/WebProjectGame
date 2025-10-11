@@ -1,0 +1,585 @@
+fileFormatVersion: 2
+guid: 144119e030641c74c82107392d401795
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1349709478435178760
+    second: Farmer_parts_0
+  - first:
+      213: 4510097335145899922
+    second: Farmer_parts_1
+  - first:
+      213: -38312015006370545
+    second: Farmer_parts_2
+  - first:
+      213: -450293077448131553
+    second: Farmer_parts_3
+  - first:
+      213: 1489063712170477660
+    second: Farmer_parts_4
+  - first:
+      213: -706663824903885993
+    second: Farmer_parts_5
+  - first:
+      213: -4351747586257589076
+    second: Farmer_parts_6
+  - first:
+      213: 4083357392102684953
+    second: Farmer_parts_7
+  - first:
+      213: 8015485996109650094
+    second: Farmer_parts_8
+  - first:
+      213: -1673960677350767713
+    second: Farmer_parts_9
+  - first:
+      213: 30727255318440890
+    second: Farmer_parts_10
+  - first:
+      213: -580709424923710911
+    second: Farmer_parts_11
+  - first:
+      213: -4237294613471490832
+    second: Farmer_parts_12
+  - first:
+      213: -396611635832718765
+    second: Farmer_parts_13
+  - first:
+      213: -8972394982373732034
+    second: Farmer_parts_14
+  - first:
+      213: -967712159365334816
+    second: Farmer_parts_15
+  - first:
+      213: 4129012108062969272
+    second: Farmer_parts_16
+  - first:
+      213: 2604172702907256354
+    second: Farmer_parts_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Farmer_parts_0
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 535
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f6b4e3616ed44de0800000000000000
+      internalID: -1349709478435178760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Farmer_parts_1
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 537
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 297aecb71a5179e30800000000000000
+      internalID: 4510097335145899922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Farmer_parts_2
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 471
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f057ae2ec63e77ff0800000000000000
+      internalID: -38312015006370545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Farmer_parts_3
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 473
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1cf2e1f4dc30c9f0800000000000000
+      internalID: -450293077448131553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Farmer_parts_4
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 407
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5888db8e873aa410800000000000000
+      internalID: 1489063712170477660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Farmer_parts_5
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 409
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75b2cfccefc6136f0800000000000000
+      internalID: -706663824903885993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Farmer_parts_6
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 343
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cace3f870ac7b93c0800000000000000
+      internalID: -4351747586257589076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Farmer_parts_7
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 345
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 919fe3fd9effaa830800000000000000
+      internalID: 4083357392102684953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Farmer_parts_8
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 279
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea8db3cab0abc3f60800000000000000
+      internalID: 8015485996109650094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Farmer_parts_9
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 281
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f93098a02a5e4c8e0800000000000000
+      internalID: -1673960677350767713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Farmer_parts_10
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 215
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abbad22a64a2d6000800000000000000
+      internalID: 30727255318440890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Farmer_parts_11
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 218
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14a63b1dad7e0f7f0800000000000000
+      internalID: -580709424923710911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Farmer_parts_12
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 151
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fc0b5bcffa1235c0800000000000000
+      internalID: -4237294613471490832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Farmer_parts_13
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 154
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35a776c81d3fe7af0800000000000000
+      internalID: -396611635832718765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Farmer_parts_14
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 87
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e31dd132d46ab7380800000000000000
+      internalID: -8972394982373732034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Farmer_parts_15
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 89
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e8f3301beef192f0800000000000000
+      internalID: -967712159365334816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Farmer_parts_16
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 29
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bd4166c2a23d4930800000000000000
+      internalID: 4129012108062969272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Farmer_parts_17
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 29
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22e4e8a9641e32420800000000000000
+      internalID: 2604172702907256354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Farmer_parts_0: -1349709478435178760
+      Farmer_parts_1: 4510097335145899922
+      Farmer_parts_10: 30727255318440890
+      Farmer_parts_11: -580709424923710911
+      Farmer_parts_12: -4237294613471490832
+      Farmer_parts_13: -396611635832718765
+      Farmer_parts_14: -8972394982373732034
+      Farmer_parts_15: -967712159365334816
+      Farmer_parts_16: 4129012108062969272
+      Farmer_parts_17: 2604172702907256354
+      Farmer_parts_2: -38312015006370545
+      Farmer_parts_3: -450293077448131553
+      Farmer_parts_4: 1489063712170477660
+      Farmer_parts_5: -706663824903885993
+      Farmer_parts_6: -4351747586257589076
+      Farmer_parts_7: 4083357392102684953
+      Farmer_parts_8: 8015485996109650094
+      Farmer_parts_9: -1673960677350767713
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
