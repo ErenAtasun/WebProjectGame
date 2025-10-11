@@ -5,7 +5,7 @@ public class PlayerController : NetworkBehaviour
 {
     [SyncVar(hook = nameof(OnCharacterIdChanged))] // HOOK EKLE
     public int characterId;
-
+    private Vector3 lastMoveDirection = Vector3.down;
     [SyncVar(hook = nameof(OnPositionChanged))]
     private Vector3 syncedPosition;
 
@@ -33,6 +33,24 @@ public class PlayerController : NetworkBehaviour
         }
     }
 
+    void HandleInput()
+    {
+        if (Time.time - lastInputTime < INPUT_RATE_LIMIT)
+            return;
+            
+        float horizontal = Input.GetAxis("Horizontal");
+        float vertical = Input.GetAxis("Vertical");
+        
+        Vector3 inputDir = new Vector3(horizontal, vertical, 0);
+        
+        if (inputDir.magnitude > 0.01f)
+        {
+            lastMoveDirection = inputDir.normalized;
+            CmdMove(inputDir, lastMoveDirection); // YÃ¶nÃ¼ de gÃ¶nder
+            lastInputTime = Time.time;
+        }
+    }
+
     void Update()
     {
         if (isLocalPlayer)
@@ -41,37 +59,23 @@ public class PlayerController : NetworkBehaviour
         }
     }
 
-    void HandleInput()
-    {
-        if (Time.time - lastInputTime < INPUT_RATE_LIMIT)
-            return;
-
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
-
-        Vector3 inputDir = new Vector3(horizontal, vertical, 0);
-
-        if (inputDir.magnitude > 0.01f)
-        {
-            CmdMove(inputDir);
-            lastInputTime = Time.time;
-        }
-    }
-
     [Command]
-    void CmdMove(Vector3 inputDirection)
+    void CmdMove(Vector3 inputDirection, Vector3 moveDirection)
     {
         if (inputDirection.magnitude > maxInputMagnitude)
         {
-            Debug.LogWarning($"[ANTI-CHEAT] Player {connectionToClient.connectionId} sent invalid input");
+            Debug.LogWarning($"[ANTI-CHEAT] Player sent invalid input");
             return;
         }
-
+        
         Vector3 normalizedInput = inputDirection.normalized;
         Vector3 movement = normalizedInput * moveSpeed * Time.deltaTime;
-
+        
         syncedPosition = transform.position + movement;
         transform.position = syncedPosition;
+        
+        // TÃ¼m clientlara yÃ¶nÃ¼ bildir
+        RpcUpdateDirection(moveDirection);
     }
 
     void OnPositionChanged(Vector3 oldPos, Vector3 newPos)
@@ -82,7 +86,7 @@ public class PlayerController : NetworkBehaviour
         }
     }
 
-    // CHARACTER ID DEÐÝÞÝNCE ÇAÐRILIR
+    // CHARACTER ID DEï¿½ï¿½ï¿½ï¿½NCE ï¿½Aï¿½RILIR
     void OnCharacterIdChanged(int oldId, int newId)
     {
         Debug.Log($"Character ID changed from {oldId} to {newId}");
@@ -91,39 +95,16 @@ public class PlayerController : NetworkBehaviour
 
     void ApplyCharacterVisuals()
     {
-        if (spriteRenderer == null)
-            spriteRenderer = GetComponent<SpriteRenderer>();
-
-        if (CharacterDatabase.Instance != null && spriteRenderer != null)
+        PlayerVisuals visuals = GetComponent<PlayerVisuals>();
+        
+        if (CharacterDatabase.Instance != null && visuals != null)
         {
             CharacterData charData = CharacterDatabase.Instance.GetCharacterData(characterId);
             if (charData != null)
             {
-                // Sprite varsa uygula
-                if (charData.characterSprite != null)
-                {
-                    spriteRenderer.sprite = charData.characterSprite;
-                }
-
-                // Rengi uygula
-                spriteRenderer.color = charData.characterTint;
-
-                // Local player daha parlak
-                if (isLocalPlayer)
-                {
-                    spriteRenderer.color = Color.Lerp(charData.characterTint, Color.white, 0.3f);
-                }
-
-                Debug.Log($"Applied {charData.characterName} visuals - Color: {charData.characterTint}");
+                visuals.ApplyCharacterSprites(charData);
+                Debug.Log($"Applied {charData.characterName} visuals");
             }
-            else
-            {
-                Debug.LogError($"Character ID {characterId} not found in database!");
-            }
-        }
-        else
-        {
-            Debug.LogWarning("CharacterDatabase or SpriteRenderer is null!");
         }
     }
 
@@ -131,5 +112,14 @@ public class PlayerController : NetworkBehaviour
     {
         base.OnStartServer();
         syncedPosition = transform.position;
+    }
+    [ClientRpc]
+    void RpcUpdateDirection(Vector3 direction)
+    {
+        PlayerVisuals visuals = GetComponent<PlayerVisuals>();
+        if (visuals != null)
+        {
+            visuals.SetDirection(direction);
+        }
     }
 }
